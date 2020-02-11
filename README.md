@@ -13,7 +13,7 @@ Environment setup regarding application development logistics.
 #### Output Type:
 * Windows Application
 
-#### Additional LibrPackages Implemented: </br>
+#### Additional Library Packages Implemented: </br>
 * Microsoft.AspNet.WebApi.Client
 * Newtonsoft.Json
 * Extended.Wpf.Toolkit
