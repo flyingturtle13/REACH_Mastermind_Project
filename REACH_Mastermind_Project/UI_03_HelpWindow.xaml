@@ -1,0 +1,15 @@
+﻿<Window x:Class="REACH_Mastermind_Project.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:REACH_Mastermind_Project"
+        mc:Ignorable="d"
+        Title="MASTERMIND - HELP" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="280,66,292.6,0" TextWrapping="Wrap" TextBlock.TextAlignment="Center" Text="GAME INFORMATION" VerticalAlignment="Top" Width="221" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="156,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="469" Height="138"><Run Text="1. Player has 10 chances to guess the number combination"/><LineBreak/><Run/><LineBreak/><Run Text="2.  Possible numbers range from 0 - 7"/><LineBreak/><Run/><LineBreak/><Run Text="3.  Numbers can be repeated"/><LineBreak/><Run/><LineBreak/></TextBlock>
+        <Button Content="CLOSE" HorizontalAlignment="Left" Margin="348,301,0,0" VerticalAlignment="Top" Width="75" Click="Close_Btn"/>
+
+    </Grid>
+</Window>

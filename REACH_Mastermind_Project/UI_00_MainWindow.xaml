@@ -1,0 +1,33 @@
+﻿<Window x:Class="REACH_Mastermind_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:REACH_Mastermind_Project"
+        mc:Ignorable="d"
+        Title="MASTERMIND" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="White">
+        
+    
+    <Window.Foreground>
+        <SolidColorBrush Color="White" Opacity="1"/>
+    </Window.Foreground>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="images/MASTERMIND-00-MainWindow-01.jpg" Opacity="0.25"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="MASTERMIND" HorizontalAlignment="Left" Margin="244,40,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Gill Sans MT" Height="66" Width="307"/>
+        <Button Content="PLAY" HorizontalAlignment="Left" Margin="229,248,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="play_Click"/>
+        <Button Content="EXIT" HorizontalAlignment="Left" Margin="476,248,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="exit_Click"/>
+        <TextBlock HorizontalAlignment="Center" Margin="265,141,265.6,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Height="72" Width="263" TextBlock.TextAlignment="Center"><Run Foreground="Black" Text="Decode the combination and free your mind."/></TextBlock>
+
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="REACH_Mastermind_Project.Result_TryAgain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:REACH_Mastermind_Project"
+        mc:Ignorable="d"
+        Title="MASTERMIND - RESULT" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="TRY AGAIN" HorizontalAlignment="Left" Margin="356,330,0,0" VerticalAlignment="Top" Width="75" Click="Close_Btn"/>
+        <Label x:Name="NumMatchDisplay" Content="" HorizontalAlignment="Left" Margin="279,141,0,0" VerticalAlignment="Top" Width="29" FontSize="18"/>
+        <Label Content="Matched Number(s)" HorizontalAlignment="Left" Margin="313,141,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Matched Number Location(s)" HorizontalAlignment="Left" Margin="313,190,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="NumLocDisplay" Content="" HorizontalAlignment="Left" Margin="279,190,0,0" VerticalAlignment="Top" Width="29" FontSize="18"/>
+        <Label Content="Attempts Left" HorizontalAlignment="Left" Margin="314,239,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="AttLeftDisplay" Content="" HorizontalAlignment="Left" Margin="279,239,0,0" VerticalAlignment="Top" Width="29" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="98,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="91" Width="610" FontSize="20" TextBlock.TextAlignment="Center"><Run Text="Try again.  Use the "/><Run FontWeight="Bold" Text="Guess History "/><Run Text="to flex those brain muscles and strategize your next combination attempt.  You can do it!"/></TextBlock>
+    </Grid>
+</Window>
