@@ -16,6 +16,7 @@ namespace REACH_Mastermind_Project
 {
     /// <summary> 
     /// Interaction logic for Result_TryAgain.xaml
+    /// Player will be prompted with results from previous attempt (numbers matched, number positions matched, attempts left)
     /// </summary>
     public partial class Result_TryAgain : Window
     {
@@ -27,8 +28,11 @@ namespace REACH_Mastermind_Project
             AttLeftDisplay.Content = attemptLeft;
         }
 
+        //Try Again Button - returns player to User Input Window-------
         private void Close_Btn(object sender, RoutedEventArgs e)
         {
+            UserInput ui = new UserInput();
+            ui.Show();
             this.Close();
         }
     }

@@ -23,7 +23,6 @@ namespace REACH_Mastermind_Project
     
     partial class UserInput : Window
     {
-
         public UserInput()
         {
             InitializeComponent();
@@ -32,20 +31,18 @@ namespace REACH_Mastermind_Project
 
         //-------------------------------------------------------
 
-
-        public static void StoreApiRes(string apiResponse)
-        {
-            NumberModel.ApiResNums = apiResponse;
-        }
-
-
+        //global access to player guess history to be retrieved when next attempt initiated
         public static List<HistoryList> histList = new List<HistoryList>();
-        private void Unlock_Btn(object sender, RoutedEventArgs e)
+
+
+        //Unlock Button - Player to submit combination guess---------------
+        private async void Unlock_Btn(object sender, RoutedEventArgs e)
         {            
             List<int> inputNums = new List<int>();
             List<string> inputText = new List<string>();
             int error = 0;
 
+            //Creates a list of user combination input
             inputText.Add(num1Input1.Text);
             inputText.Add(num2Input2.Text);
             inputText.Add(num3Input3.Text);
@@ -61,18 +58,22 @@ namespace REACH_Mastermind_Project
                 }
                 else
                 {
+                    //If player leaves an input blank or does not comply with rules,
+                    //will flag to notify player try re-entering values
                     error++;
                 }
             }   
 
-            if (error < 1)
+            if (error == 0)
             {
-                CombCheck.SetCombNums(inputNums);
+                //Pass inputs to combination check class
+                CombCheck eval = new CombCheck();
+                await eval.SetCombNums(inputNums);
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("There are " + error + "input errors.  Make sure to input a number from 0 to 7 in all placeholders.");
+                MessageBox.Show("There are " + error + " input errors.  Make sure to input a number from 0 to 7 in all placeholders.");
             }
         }
 
@@ -107,7 +108,7 @@ namespace REACH_Mastermind_Project
     }
 
 
-    //Globalize player guess history list to pass parameters
+    //Globalize player guess history list to pass properties
     public class HistoryList
     {
         public int AttemptNum { get; set; }

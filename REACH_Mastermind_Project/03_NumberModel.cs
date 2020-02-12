@@ -9,17 +9,17 @@ using REACH_Mastermind_Project;
 
 namespace NumModel
 {
-    //Number Model from Random Integer API (https://www.random.org/integers)
+    //Number Model from Random Integer API (https://www.random.org/integers).  Number Request class to access
     public class NumberModel
     {
         //globalized parameter for web API output to be processed
-        public static string ApiResNums { get; set; }
+        public static string apiRanNum { get; set; }
 
         //Converts API output type to a List of String type
         public static List<string> LoadNumber()
         {
             List<string> numbers = new List<string>();
-            string apiResponse = NumberModel.ApiResNums;
+            string apiResponse = apiRanNum;
 
             foreach (char item in apiResponse)
             {
@@ -30,7 +30,7 @@ namespace NumModel
                     numbers.Add(number);
                 }
             }
-
+           
             return numbers;
         }
     }

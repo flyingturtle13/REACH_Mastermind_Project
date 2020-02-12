@@ -16,6 +16,8 @@ namespace REACH_Mastermind_Project
 {
     /// <summary>
     /// Interaction logic for FeedbackHistory.xaml
+    /// Window allows player to view previous attempt history information to help strategize
+    /// Includes previous inputted combinations, attempt #, numbers matched, number positions matched
     /// </summary>
     public partial class FeedbackHistory : Window
     {
@@ -26,10 +28,12 @@ namespace REACH_Mastermind_Project
         }
 
 
-        public void Guess_ListView(int attempts, List<int> userNums, int numMatch, int locMatch)
+        //Receiving method for parameters passed from combination check class if player is to attempt again
+        public void Guess_ListView(int attempt, List<int> userNums, int numMatch, int locMatch)
         {
             string userComb = "";
 
+            //converting player inputted previous attempt combination in readible string type
             for (int i = 0; i < userNums.Count; i++)
             {
                 if (i == userNums.Count - 1)
@@ -47,18 +51,21 @@ namespace REACH_Mastermind_Project
             }
 
             
+            //Adding properties to existing 
             UserInput.histList.Add(new HistoryList
             {
-                AttemptNum = attempts,
+                AttemptNum = attempt,
                 Combination = userComb,
                 NumMatch = numMatch,
                 NumPosMatch = locMatch
             });
 
+            //Add new properties to list view
             guess_ListView.ItemsSource = UserInput.histList;
         }
 
 
+        //Close Button - returns player to User Input window-------
         private void Close_Btn(object sender, RoutedEventArgs e)
         {
             this.Hide();

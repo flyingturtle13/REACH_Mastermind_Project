@@ -19,9 +19,14 @@ namespace REACH_Mastermind_Project
     /// </summary>
     public partial class Result_Success : Window
     {
+        public static string quoteReveal { get; set; }
+
+        public static string authorReveal { get; set; }
         public Result_Success()
         {
             InitializeComponent();
+            QuoteDisplay.Text = $" ''{quoteReveal}'' ";
+            AuthorDisplay.Text = $"- {authorReveal} -";
         }
 
         private void Close_Btn(object sender, RoutedEventArgs e)

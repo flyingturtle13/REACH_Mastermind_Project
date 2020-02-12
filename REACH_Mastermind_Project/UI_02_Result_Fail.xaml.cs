@@ -16,6 +16,7 @@ namespace REACH_Mastermind_Project
 {
     /// <summary>
     /// Interaction logic for Result_Fail.xaml
+    /// Window opens if player has no more attempts
     /// </summary>
     public partial class Result_Fail : Window
     {
@@ -24,9 +25,9 @@ namespace REACH_Mastermind_Project
             InitializeComponent();
         }
 
+        //Close Button---------------------------------------------
         private void Close_Btn(object sender, RoutedEventArgs e)
         {
-            this.Hide();
             MainWindow returnMain = new MainWindow();
             returnMain.Show();
             this.Close();

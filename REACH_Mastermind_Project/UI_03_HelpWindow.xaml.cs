@@ -16,6 +16,7 @@ namespace REACH_Mastermind_Project
 {
     /// <summary>
     /// Interaction logic for HelpWindow.xaml
+    /// Help prompt reminding player of game rules/information
     /// </summary>
     public partial class HelpWindow : Window
     {
@@ -24,6 +25,7 @@ namespace REACH_Mastermind_Project
             InitializeComponent();
         }
 
+        //Close Button - returns player to User Input window-----
         private void Close_Btn(object sender, RoutedEventArgs e)
         {
             this.Close();

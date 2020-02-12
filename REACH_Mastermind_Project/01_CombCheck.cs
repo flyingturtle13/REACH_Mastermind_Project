@@ -4,27 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NumModel;
+using WebApi;
 using REACH_Mastermind_Project;
 using System.Windows.Forms;
 
 namespace REACH_Mastermind_Project
 {
+
+    //Class that evaluates player combination input. Checks if combination matches computer generated combination
+    //and returns the result to the player
     class CombCheck
     {
-        public static void SetCombNums(List<int> inputNums)
+        //Method to compile user and computer number combinations. Unlock Button directs to this class.
+        public async Task SetCombNums(List<int> inputNums)
         {
+            //sets user combination input
             List<string> apiNums = new List<string>();
             List<int> userNums = inputNums;
 
+            //Initiates Number Model to call API for random combination
             NumberModel nm = new NumberModel();
             apiNums = NumberModel.LoadNumber();
 
-            CombCheck.RunCheck(apiNums, userNums);
+            await CombCheck.RunCheck(apiNums, userNums);
         }
 
 
         //Evaluates if user input combination matches API generated combination 
-        public static void RunCheck(List<string> apiNums, List<int> userNums)
+        public static async Task RunCheck(List<string> apiNums, List<int> userNums)
         {
             //MessageBox.Show("User: " + userNums[0] + "," + userNums[1] + "," + userNums[2] + "," + userNums[3]);
             //MessageBox.Show("API: " + apiNums[0] + "," + apiNums[1] + "," + apiNums[2] + "," + apiNums[3]);
@@ -32,6 +39,7 @@ namespace REACH_Mastermind_Project
             UserInput ui = new UserInput();
             MainWindow mw = new MainWindow();
 
+            //Conditions being checked to determined numbers matched and number positions matched
             if (MainWindow.InPlay == true)
             {
                 int numMatch = 0;
@@ -39,7 +47,7 @@ namespace REACH_Mastermind_Project
                 List<int> apiNumsTest = new List<int>();
                 List<int> userNumsTest = userNums.ToList<int>();
 
-                //convert generated API random numbers to type integer
+                //convert generated API random numbers to integer type
                 foreach (string item in apiNums)
                 {
                     int num = int.Parse(item);
@@ -84,16 +92,24 @@ namespace REACH_Mastermind_Project
                 //Determine results of user combination guess
                 if (numMatch == apiNums.Count && locMatch == apiNums.Count)
                 {
+                    //for successful combination
+                    //initiates API call for random quote to return to user
+                    await QuoteRequest.GetQuote();
+                    //
                     MainWindow.InPlay = false;
+
                     Result_Success matched = new Result_Success();
 
-                    fHis.Guess_ListView(10 - MainWindow.AttemptCnt, userNums, numMatch, locMatch);
-                    ui.Show();
+                    //passess parameters for player guess history
+                    //fHis.Guess_ListView(10 - MainWindow.AttemptCnt, userNums, numMatch, locMatch);
+
+                    ui.Close();
+                    mw.Show();
                     matched.Show();
-                    
                 }
                 else if (MainWindow.AttemptCnt == 1)
                 {
+                    //for if player fails - 0 attempts left
                     Result_Fail fail = new Result_Fail();
 
                     MainWindow.InPlay = false;
@@ -104,19 +120,19 @@ namespace REACH_Mastermind_Project
                 }
                 else
                 {
+                    //for when player is perform next attempt
                     MainWindow.AttemptCnt -= 1;
+
                     Result_TryAgain tryAgain = new Result_TryAgain(numMatch, locMatch, MainWindow.AttemptCnt);
 
-                    //MessageBox.Show("UN:" + userNums[0].ToString() + userNums[1].ToString() + userNums[2].ToString() + userNums[3].ToString());
-                    //MessageBox.Show("API: " + apiNums[0] + "," + apiNums[1] + "," + apiNums[2] + "," + apiNums[3]);
                     fHis.Guess_ListView(10-MainWindow.AttemptCnt, userNums, numMatch, locMatch);
                     
-                    ui.Show();
                     tryAgain.Show();
                 }
             }
             else
             {
+                //case for when game no longer to continue
                 mw.Show();
                 ui.Close();
             }

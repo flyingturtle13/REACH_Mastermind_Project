@@ -88,11 +88,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="01_CombCheck.cs" />
+    <Compile Include="03_NumberRequest.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="03_QuoteModel.cs" />
+    <Compile Include="03_QuoteRequest.cs" />
     <Compile Include="UI_03_FeedbackHistory.xaml.cs">
       <DependentUpon>UI_03_FeedbackHistory.xaml</DependentUpon>
     </Compile>
@@ -127,8 +130,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="00_WebApi.cs" />
-    <Compile Include="02_NumberModel.cs" />
+    <Compile Include="03_WebApi.cs" />
+    <Compile Include="03_NumberModel.cs" />
     <Compile Include="UI_00_MainWindow.xaml.cs">
       <DependentUpon>UI_00_MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

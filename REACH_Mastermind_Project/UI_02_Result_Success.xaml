@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="MASTERMIND - RESULT" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Content="CLOSE" HorizontalAlignment="Left" Margin="361,319,0,0" VerticalAlignment="Top" Width="75" Click="Close_Btn"/>
-        <TextBlock HorizontalAlignment="Left" Margin="179,84,0,0" TextWrapping="Wrap" TextBlock.TextAlignment="Center" Text="Huzzah!!! You are a true mastermind.  Go forth and use your mind for good." VerticalAlignment="Top" FontSize="20" Height="52" Width="431"/>
+        <Button Content="CLOSE" HorizontalAlignment="Left" Margin="353,332,0,0" VerticalAlignment="Top" Width="75" Click="Close_Btn"/>
+        <TextBlock HorizontalAlignment="Left" Margin="179,84,0,0" TextWrapping="Wrap" TextBlock.TextAlignment="Center" Text="Huzzah!!! You are a true mastermind.  Delight in this wisdom for some food for thought." VerticalAlignment="Top" FontSize="20" Height="52" Width="431"/>
+        <TextBlock x:Name="QuoteDisplay" HorizontalAlignment="Center" Margin="65,176,73.6,0" TextWrapping="Wrap"  TextBlock.TextAlignment="Center" Text="Quote" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontStyle="Italic" Width="655" Height="86"/>
+        <TextBlock x:Name="AuthorDisplay" HorizontalAlignment="Center" Margin="65,267,73.6,0" TextWrapping="Wrap" TextBlock.TextAlignment="Center" Text="Author" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="655"/>
 
     </Grid>
 </Window>
