@@ -40,7 +40,7 @@ Application features and specs
 
 ## Application Structure
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See below for the flow chart depicting overall structure and flow of the application.  It highlights visible and backend processes.  The application begins at the Main Menu symbol.</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The WPF application in visual studio serves as the foundation for the user interface to develop Mastermind. Various controls (mostly buttons) are implemented so that the user can interact and navigate through the game.  The controls also send information to the backend to process API web calls, evaluate user input, and determine results.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To develop Mastermind, the WPF application in visual studio serves as the foundation for the user interface. Various controls (mostly buttons) are implemented so that the user can interact and navigate through the game.  The controls also send information to the backend to process API web calls, evaluate user input, and determine results.  
 <p align="center">
   <img src="https://user-images.githubusercontent.com/44215479/74339457-f7519080-4d58-11ea-90d3-88cd95b4ca2c.png" width="800">
 </p> 
