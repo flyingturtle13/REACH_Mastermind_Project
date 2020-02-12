@@ -14,7 +14,7 @@ Environment setup regarding application development logistics.
   * C#
 
 * Output Type:
-  * Windows Application
+  * Windows Application (.exe)
 
 * Additional Library Packages Implemented: </br>
   * Microsoft.AspNet.WebApi.Client
