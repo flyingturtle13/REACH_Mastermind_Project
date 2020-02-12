@@ -28,7 +28,7 @@ namespace REACH_Mastermind_Project
                     string response = await message.Content.ReadAsStringAsync();
                     
                     //-------flag - uncomment to reveal for debugging-------// 
-                    MessageBox.Show(response);
+                    //MessageBox.Show(response);
 
                     NumModel.NumberModel.apiRanNum = response;
                 }
