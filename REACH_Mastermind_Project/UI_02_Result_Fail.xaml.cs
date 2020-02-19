@@ -20,9 +20,22 @@ namespace REACH_Mastermind_Project
     /// </summary>
     public partial class Result_Fail : Window
     {
-        public Result_Fail()
+        public Result_Fail(List<string> apiNums)
         {
             InitializeComponent();
+            string comb = "";
+            for (int i = 0; i < apiNums.Count; i++)
+            {
+                if (i != apiNums.Count-1)
+                {
+                    comb += apiNums[i] + ", ";
+                }
+                else
+                {
+                    comb += apiNums[i];
+                }
+            }
+            ApiNumDisp.Content = comb;
         }
 
         //Close Button---------------------------------------------

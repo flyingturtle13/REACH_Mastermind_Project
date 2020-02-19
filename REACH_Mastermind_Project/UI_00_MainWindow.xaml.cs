@@ -37,6 +37,7 @@ namespace REACH_Mastermind_Project
             //Initiate values for global parameters
             InPlay = true;
             AttemptCnt = 10;
+            UserHint.nonMatchRangeExist = false;
             UserInput.histList.Clear();
 
             //Open UI Main Game to retrieve user input

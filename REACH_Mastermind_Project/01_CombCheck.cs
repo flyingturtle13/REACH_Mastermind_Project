@@ -84,6 +84,8 @@ namespace REACH_Mastermind_Project
                             numMatch++;
                             apiNumsTest.RemoveAt(j);
                             apiNumsTest.Insert(j, 8);
+                            userNumsTest.RemoveAt(i);
+                            userNumsTest.Insert(i, 9);
                             break;
                         }
                     }
@@ -110,7 +112,7 @@ namespace REACH_Mastermind_Project
                 else if (MainWindow.AttemptCnt == 1)
                 {
                     //for if player fails - 0 attempts left
-                    Result_Fail fail = new Result_Fail();
+                    Result_Fail fail = new Result_Fail(apiNums);
 
                     MainWindow.InPlay = false;
                     UserInput.histList.Clear();

@@ -52,9 +52,7 @@ namespace REACH_Mastermind_Project
             {
                 if (!string.IsNullOrWhiteSpace(item))
                 {
-                    inputNums.Add(int.Parse(item));
-
-                    
+                    inputNums.Add(int.Parse(item));  
                 }
                 else
                 {
@@ -96,14 +94,14 @@ namespace REACH_Mastermind_Project
         //---------------------------------------------------------
 
 
-        //Quit Game------------------------------------------------
+        //Quit Game-------------------------------------------------
         private void Quit_Btn(object sender, RoutedEventArgs e)
         {
             MainWindow returnMain = new MainWindow();
             returnMain.Show();
             UserInput.histList.Clear();
             this.Close();
-        }
+        }  
         //---------------------------------------------------------     
     }
 
