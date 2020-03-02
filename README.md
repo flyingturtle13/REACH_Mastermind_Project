@@ -55,5 +55,40 @@ Application features and specs
   <img src="https://user-images.githubusercontent.com/44215479/74343016-3e428480-4d5f-11ea-9575-30c933ad4b0b.png" width="600">
 </p>
 
+## UI Screenshots
 
+- Main Menu
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/44215479/75637773-3e56d700-5bdd-11ea-931f-8e0367c8a795.png" width="600">
+</p> 
+
+- Game Main Window
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/44215479/75637826-8fff6180-5bdd-11ea-8764-df082abfb89a.png" width="600">
+</p> 
+
+- Try Again Result Window
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/44215479/75637919-364b6700-5bde-11ea-8e98-f60326ba6707.png" width="600">
+</p> 
+
+- Fail Result Window
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/44215479/75637926-44998300-5bde-11ea-8ec1-641e292f7bb7.png" width="600">
+</p> 
+
+- Success Result Window
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/44215479/75637933-52e79f00-5bde-11ea-8b95-d967df733462.png" width="600">
+</p> 
+
+- Game Info Window
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/44215479/75637944-62ff7e80-5bde-11ea-9f95-6a99318b38b2.png" width="600">
+</p> 
+
+- Guess History Window
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/44215479/75637948-6dba1380-5bde-11ea-920c-41c6be23e6f5.png" width="600">
+</p> 
 
