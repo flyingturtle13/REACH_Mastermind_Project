@@ -36,6 +36,7 @@
         <xctk:IntegerUpDown x:Name="num4Input4" Margin="480,154,259.6,33.4" MaxLength="1" Minimum="0" Maximum="7" FontFamily="Yu Gothic UI Semibold" FontSize="48" TextAlignment="Center" ParsingNumberStyle="Integer" ShowButtonSpinner="False"/>
         <Label x:Name="AttLeftDisplay" Content="" HorizontalAlignment="Left" Margin="38,68.6,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="31" Grid.Row="1"/>
         <Button x:Name="History" Content="GUESS HISTORY" HorizontalAlignment="Left" Margin="73,116.6,0,0" VerticalAlignment="Top" Width="103" Click="His_Btn" Grid.Row="1" Background="#FFA0A0A0"/>
+        <Button x:Name="userHint" Content="HINT" HorizontalAlignment="Left" Margin="358,117,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Hint_Btn" Background="#FFA0A0A0"/>
 
     </Grid>
     

@@ -91,7 +91,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="01_CombCheck.cs" />
+    <Compile Include="03_UserHint.cs" />
     <Compile Include="03_NumberRequest.cs" />
+    <Compile Include="UI_04_Hint.xaml.cs">
+      <DependentUpon>UI_04_Hint.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +121,10 @@
     <Compile Include="UI_01_UserInput.xaml.cs">
       <DependentUpon>UI_01_UserInput.xaml</DependentUpon>
     </Compile>
+    <Page Include="UI_04_Hint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI_03_FeedbackHistory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
