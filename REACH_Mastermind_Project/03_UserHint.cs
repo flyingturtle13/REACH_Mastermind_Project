@@ -9,20 +9,25 @@ namespace REACH_Mastermind_Project
 {
     class UserHint
     {
-        public static List<int> numRange { get; set; }
-
         public static bool nonMatchRangeExist { get; set;}
+
+        public static List<int> numRange = new List<int>();
+
+        public static int HintNum { get; set; }
+
+        public static int HintCnt { get; set; }
 
         public static void GetHint()
         {
-            if (UserHint.nonMatchRangeExist == false)
+            if (nonMatchRangeExist == false)
             {
-                UserHint.NonMatchNums();
+                NonMatchNums();
             }
-            else
+            else if (nonMatchRangeExist == true && HintCnt >= 0)
             {
-                UserHint.RanHint();
+                RanHint();
             }
+             
         }
 
         public static void NonMatchNums()
@@ -55,27 +60,30 @@ namespace REACH_Mastermind_Project
 
             nonMatchRangeExist = true;
 
-            UserHint.RanHint();
+            RanHint();
         }
 
 
         public static int RanHint()
         {
-            int maxNum = numRange.Count - 1;
-            int minNum = numRange[0];
+            List<int> numRangeMod = numRange.ToList<int>();
+            int maxNum = numRange.Max()+1;
+            int minNum = numRange.Min();
             Random random = new Random();
 
-            int hint = random.Next(minNum, maxNum);
+            HintNum = random.Next(minNum, maxNum);
 
-            foreach (int num in numRange)
+            foreach (int num in numRangeMod)
             {
-                if(hint == num)
+                if(HintNum == num)
                 {
-                    numRange.Remove(hint);
+                    numRange.Remove(HintNum);
                 }
             }
 
-            return hint;
+            HintCnt -= 1;
+
+            return HintNum;
         }
 
     }

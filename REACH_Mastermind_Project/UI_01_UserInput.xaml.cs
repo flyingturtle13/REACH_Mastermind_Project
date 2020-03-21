@@ -92,6 +92,15 @@ namespace REACH_Mastermind_Project
             openHistory.Show();
         }
         //---------------------------------------------------------
+        
+
+        //Hint Button----------------------------------------------
+        private void Hint_Btn(object sender, RoutedEventArgs e)
+        {
+            Hint openHint= new Hint();
+            openHint.Show();
+        }
+        //---------------------------------------------------------
 
 
         //Quit Game-------------------------------------------------
@@ -101,7 +110,7 @@ namespace REACH_Mastermind_Project
             returnMain.Show();
             UserInput.histList.Clear();
             this.Close();
-        }  
+        }
         //---------------------------------------------------------     
     }
 

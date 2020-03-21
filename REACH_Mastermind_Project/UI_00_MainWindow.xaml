@@ -25,7 +25,7 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Label Content="MASTERMIND" HorizontalAlignment="Left" Margin="244,40,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Gill Sans MT" Height="66" Width="307"/>
-        <Button Content="PLAY" HorizontalAlignment="Left" Margin="229,248,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="play_Click"/>
+        <Button Content="PLAY" HorizontalAlignment="Left" Margin="229,248,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="Play_Click"/>
         <Button Content="EXIT" HorizontalAlignment="Left" Margin="476,248,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="exit_Click"/>
         <TextBlock HorizontalAlignment="Center" Margin="265,141,265.6,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Height="72" Width="263" TextBlock.TextAlignment="Center"><Run Foreground="Black" Text="Decode the combination and discover new wisdom to live by."/></TextBlock>
 

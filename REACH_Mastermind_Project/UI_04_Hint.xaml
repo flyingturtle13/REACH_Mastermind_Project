@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:REACH_Mastermind_Project"
         mc:Ignorable="d"
-        Title="Hint" Height="450" Width="800">
+        Title="Hint" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Button x:Name="getHint_Btn" Content="GET HINT" HorizontalAlignment="Left" Margin="358,304,0,0" VerticalAlignment="Top" Width="75" Click="GetHint_Btn"/>
+        <TextBlock HorizontalAlignment="Left" Margin="79,66,0,0" TextWrapping="Wrap" Text="WOULD YOU LIKE SOME HELP?  OPT TO REVEAL A NUMBER NOT IN THE COMBINATION.  " VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="HINTS LEFT" HorizontalAlignment="Left" Margin="363,115,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="hintLeft" Content="" HorizontalAlignment="Left" Margin="335,113,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="38" FontSize="18"/>
+        <Label x:Name="revNum" Content="?" HorizontalContentAlignment="Center" Margin="0,174,4.6,0" VerticalAlignment="Top" FontSize="48" Width="789" Height="73"/>
+        <Button x:Name="hintClose" Content="CLOSE" HorizontalAlignment="Left" Margin="648,369,0,0" VerticalAlignment="Top" Width="75" Click="HintClose_Btn"/>
+
     </Grid>
 </Window>

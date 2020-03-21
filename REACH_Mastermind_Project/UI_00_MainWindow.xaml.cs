@@ -32,11 +32,12 @@ namespace REACH_Mastermind_Project
         }
 
         //Play Button - Starts Game
-        private async void play_Click(object sender, RoutedEventArgs e)
+        private async void Play_Click(object sender, RoutedEventArgs e)
         {           
             //Initiate values for global parameters
             InPlay = true;
             AttemptCnt = 10;
+            UserHint.HintCnt = 3;
             UserHint.nonMatchRangeExist = false;
             UserInput.histList.Clear();
 

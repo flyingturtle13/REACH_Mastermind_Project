@@ -22,6 +22,36 @@ namespace REACH_Mastermind_Project
         public Hint()
         {
             InitializeComponent();
+            if (UserHint.HintCnt >= 0)
+            {
+                hintLeft.Content = UserHint.HintCnt;
+            }
+            else
+            {
+                hintLeft.Content = 0;
+            }
+            
+        }
+
+        private void GetHint_Btn(object sender, RoutedEventArgs e)
+        {
+            UserHint.GetHint();
+
+            if (UserHint.HintCnt >= 0)
+            {
+                revNum.Content = UserHint.HintNum;
+                hintLeft.Content = UserHint.HintCnt;
+            }
+            else
+            {
+                revNum.Content = "You're on your own.";
+                hintLeft.Content = 0;
+            }
+        }
+
+        private void HintClose_Btn(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

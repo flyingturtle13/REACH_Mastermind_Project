@@ -23,7 +23,7 @@ namespace REACH_Mastermind_Project
             List<int> userNums = inputNums;
 
             //Initiates Number Model to call API for random combination
-            NumberModel nm = new NumberModel();
+            //NumberModel nm = new NumberModel();
             apiNums = NumberModel.LoadNumber();
 
             await CombCheck.RunCheck(apiNums, userNums);
