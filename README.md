@@ -35,8 +35,9 @@ Application features and specs
   * number range is from 0 to 7
   * Using Random Number Generator API (https://www.random.org/integers) to provide computer number combination. 
 
-* Extnesion
+* Extensions
   * Random quote generated using API (https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?) when player is successful at decoding the combination.
+  * User Hint (updated 3/20/2020): User can choose to receive a hint in the form of receiving a number not in the combination.  User can get up to a maximum of 3 hints.  In future update, receiving a hint will affect number of attempts left.
 
 ## Application Structure
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See below for the flow chart depicting overall structure and flow of the application.  It highlights visible and backend processes.  The application begins at the Main Menu symbol.</br>
@@ -62,9 +63,9 @@ Application features and specs
   <img src="https://user-images.githubusercontent.com/44215479/75637773-3e56d700-5bdd-11ea-931f-8e0367c8a795.png" width="600">
 </p> 
 
-- Game Main Window
+- Game Main Window (Upated 3/21/2020)
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/44215479/75637826-8fff6180-5bdd-11ea-8764-df082abfb89a.png" width="600">
+  <img src="https://user-images.githubusercontent.com/44215479/77232839-a0618700-6b60-11ea-864b-8b10734657fd.png" width="600">
 </p> 
 
 - Try Again Result Window
@@ -92,3 +93,7 @@ Application features and specs
   <img src="https://user-images.githubusercontent.com/44215479/75637948-6dba1380-5bde-11ea-920c-41c6be23e6f5.png" width="600">
 </p> 
 
+- Hint Window
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/44215479/77232964-896f6480-6b61-11ea-9c79-94a504e3be47.png" width="600">
+</p> 
